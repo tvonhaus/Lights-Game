@@ -3,6 +3,7 @@ import pygame as pyg
 class Player(object):
     def __init__(self):
         self.rect = pyg.Rect((200,150,10,10))
+        self.hitpoints = 100
                 
     def player_control(self):
         key = pyg.key.get_pressed()
