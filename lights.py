@@ -22,9 +22,12 @@ while not game_over:
         if event.type==pyg.QUIT:
             game_over = True
     
+
+
     dis.fill(black)
     player.draw(dis)
     player.player_control()
+    player.update(dis)
     pyg.display.update()
 
     clock.tick(30)
