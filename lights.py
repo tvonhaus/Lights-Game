@@ -1,5 +1,6 @@
 import pygame as pyg
 from player import Player 
+from attacker import Attacker
 
 pyg.init()
 dis_width = 800
@@ -14,6 +15,7 @@ black = (0,0,0)
 
 
 player = Player()
+attacker1 = Attacker()
 clock = pyg.time.Clock()
 
 game_over = False
@@ -28,6 +30,7 @@ while not game_over:
     player.draw(dis)
     player.player_control()
     player.update(dis)
+    attacker1.draw(dis)
     pyg.display.update()
 
     clock.tick(30)
