@@ -5,9 +5,10 @@ import time
 class Attacker(object):
     def __init__(self):
         self.rect = pyg.Rect((500,0,50,10))
+        self.color = (255,0,0)
 
     def draw(self, color, display):
-            pyg.draw.rect(display, color, self.rect)
+            pyg.draw.rect(display, self.color, self.rect)
 
     def spawn_attacker(self):
             new_x = 0
@@ -38,8 +39,13 @@ class Attacker(object):
         
             return new_x, new_y, attacker_x, attacker_y
 
+    def update_color(self,color):
+        self.color = color
+
     def flash(self,display):
+        self.draw((255,0,0), display)
         pyg.display.update()
+        pyg.time.delay
         self.draw((255,255,255), display)
         pyg.display.update()
         self.draw((255,0,0), display)

@@ -2,12 +2,12 @@ import pygame as pyg
 
 class Player(object):
     def __init__(self):
-        self.rect = pyg.Rect((200,150,10,10))
+        self.rect = pyg.Rect((200,150,20,20))
         self.hitpoints = 100
                 
     def player_control(self):
         key = pyg.key.get_pressed()
-        dist = 10
+        dist = 6
         if key[pyg.K_LEFT]:
             if self.rect == (800,150,10,10):
                 self.rect.move_ip(0,0)
